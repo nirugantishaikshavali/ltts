@@ -1,0 +1,238 @@
+1.Explain the difference between a list and a tuple?
+->list is mutable,here based upon index change the value   
+ tuple is immutable,here based upon index we can'nt change the value
+->list represented by square brackets->[]
+tuple represented by round paranthesis->()
+->In performance tuple is faster than list because they are immutable.
+->In list need more memory compare to tuple.
+
+
+2.why is python called an interpreted language?
+A)It Executes instructions directly and line-by-line.This allows for more flexibility and ease of debugging, as errors can be identified and fixed in individual lines of code during execution.
+
+->It does not compile and run a complete program at once.
+An interperter execute code line by line at runtime ,while a compile translates the entire code into machin language before exection.
+
+3.How does python manage memory?
+A.
+->A Memory in python is managed by the python memory manager,objects and datastructures are stored in a private heap and the garbage collector recycle unused memory.
+
+->Python keeps track of how many times each piece of data is being used.when something is not needed anymore.Python automatically cleans it up,freeing up memory for other things.
+
+4.Difference btw dictionary vs set
+->Dictionary is an unordered collection of elements ,These elements in a dictionay are stored as key value pairs.
+->Set is an unordered collection of unique objects.sets define cutly braces {} .
+
+5)what is the difference between a module and a package?
+A python module may contains several classes,functions,variables..etc
+whereas a python package can contains several modules,in simpler terms
+a package is folder that contains various modules as files.
+
+A module in python is simply a.py file containg python code ,This code can be imported and used in anothe python script using the import statement.
+
+math.py                  arthmetic.py
+def add(x,y)             import math
+    return x+y           x=3,y=5
+                         print(math.add(x,y))
+                         
+A package, on the other hand ,is a collection of modules ,it is a way of organizing related python modules into a directory
+essentially,it's adirectory that contains multiple module file LONG WITH A SPECIAL FILE CAlled __init__.py .
+
+
+
+
+Module Attributes:-
+1)__name__  Attribute---->If the source file is executed as the main program, the interpreter sets the __name__ variable to have a value “__main__”.
+
+2)__doc__  Attribute---->it is used  to  find comments in document.
+3)__file__  Attribute----->it is used to find location
+4)__dict__  Attribute----->it will represent output as key value pair in the form of dictionary
+
+i)__name__
+python.py                   cmd:-
+import math                 print(__name__)
+print(math.__name__)        output:-__main__
+output:-
+"math"
+
+ii)import file1
+print(file1.__doc__)#it print comments in file1
+
+iii)print(dir())  without import external libraries
+it will print list of attributes of the objects([__doc__,__file__,__name__,__package__])
+
+iv)print(dir())  with import external libraries
+it will print list of attributes of the objects
+
+
+
+
+6.Explain the logical operators in pyhton?
+A)AND,OR,NOT  ->if not x<5:
+              print(x is not less than 5)
+              
+              
+7)What is the use of pass keyword in python?
+A)Pass is a null statement that basically does nothing
+usage:-it is often used as a placeholder where a statement is required syntactcally ,but no action needs to be taken.
+
+8)Difference between iterator vs generator?
+1.To create iterator we use iter() and to create generator we using function along with yield keyword.
+2.Generator uses the yield keyword.It saves the local variable.
+3.Generator in python helps us to write fast and compact code.
+4.Python iterator is much more memory efficient.
+5.In iterator we iter the next iterator we use next keyword.
+
+Generators in python returns an iterator that produces sequences of values one at a time .we use the yield keyword to produce values.
+
+
+9).Difference between shallow copy vs deep copy?
+A.
+deep copy and shallow copy are methods used to copy objects.
+
+Single list - Shallow copy: Any change to an element in the copy does not affect the original list. This is because the copy and the original list contain different elements that happen to have the same values.
+Single list - Deep copy: Any change to an element in the copy does not affect the original list. This is because a deep copy creates a new list with new instances of the elements, so the copy and the original list are completely independent.
+Multiple (nested) list - Shallow copy: Changes to nested objects in the copy may affect the original list. This is because a shallow copy creates a new list that points to the same nested objects as the original list.
+Multiple (nested) list - Deep copy: Changes to nested objects in the copy do not affect the original list. This is because a deep copy creates a new list and also creates new instances of the nested objects, so the copy and the original list are completely independent.
+
+
+10)what is the difference between == and is
+==checks for equality 
+is checks for identity
+
+1.Difference between static method vs class method
+1.It define using @staticmethod decorator         1. It define using @classmethod decorator
+2.No special first parameter(self or cls)         2.Takes 'cls' as the first parameter to refer to tge class
+3.Cannot access or modify instance data           3.Cannot access instance data but can modify class state
+4.Static method does not interact with any instance or class-specific data    4.class method interacts with the class level attribute class_attribute
+
+11).what is exception  handling?
+In python exception handling using in try-except block
+->In try block we write the code that might raise an error,and if an error occurs,
+the corresponding except block handles it.
+
+Exceptions errors are there( TypeErro,NameError,zeroDivisonError)
+
+finally block is used to execute whether an exception occurs or not.
+try:
+	a=1
+	c=a+b
+except TypeError:
+	print("Try to make the datatype similar")
+except Exception as ex:
+	print(ex)
+    
+    
+12).what is closure?
+A)A function declare inside the function.
+
+13).what is decorators?
+A)Decorator is a higher-order function,function calling within function and passing function as a parameter.
+
+
+14).Explain how python's garbage collection works?
+A)Python garbage collection automatically frees up memory by periodically identifying and removing objects that are no longer needed,like a virtual cleanup crew for unused data.
+
+
+15).Differece between *args vs **kwargs
+*args-It is used to pass a variable number of positional arguments to a function.
+**kwargs-It is used to pass a variable number of keyword arguments.
+
+
+16).difference between namespace and scope?
+Namespace is a system which will control all the names in your program and it will
+allow us to reuse a name in your program it will conflict.
+->namespace it will take care about the names.
+
+
+
+IMP:-
+->collection of different names.
+
+->built-in namespace   --->print(__builtins__)
+It will contains  pre-defined names of all pf python's built-in objects already available in python.
+ex:-ArithmeticError,False,True,TypeError,None,ImportError,set,len
+
+->global namespace:-
+it consists of any names in python at any level of the main program.
+->local namespace
+it will create the within the function
+
+scope:-def f1():
+	x=4
+	print(x)
+    f1()
+print(x)
+
+here we can'nt access x outside the function beacuse x defined inside the function
+it will access inside the function only it has it's own life time and it's own region it available this is called scope
+
+variable is accessible is called variable scope.
+->local scope
+->global scope
+->enclose scope
+-<built scope
+
+
+
+17.Difference b/w multiprocessig and multithreading?
+A.Multiprocessign and Multithreading both are ways to achieve multitasking
+
+->multiple task doing at the same time is called multitasking.
+
+MultiThreading:-
+Threads will share this outer space there will have their own instruction sets they will be doing each of these threads doing specific tasks and they will execute own code and their own stack memory but only thing that they share is that a space it means
+if you have any global variable in your program they can be accessed by these threads and heap memory can be accesses by this threads
+
+MultiProcessig:-
+There have their own address space and either they commmunicate with each other they can use inter process communcication techiques suh as a file on the disk or shared memory or a message pipe
+
+Threads are lightweight vs process are highweight.
+
+
+18.what is the super function in python?
+By using Super keyword we access  methods and properties of a parents.
+
+
+19.what is difference between assert and raise
+A.assert is used for debugging purpose while raise used to raise exception.
+
+
+
+20.what is the Global Interperter Lock (GIL) in python?
+The GIL is a mutex that protects access to python objects ,preventing multiple threads from executing simultaneously in a single
+process These means in a multi-threaded python progam only one thread can execute python code at a time ,which can limit the performance of CPU-bound programs.The GIL os necessary because python memory management is not thread safe 
+
+
+21.what are function annotations in python?
+Function annotations in Python, also known as type hints, are a way to provide information about the types of arguments a function expects and the type of value it returns.
+def greet(name: str) -> str:
+    return f"Hello, {name}!"
+    
+    
+22.what is the diiference between python array and lists?
+A.Array can only contains elements of the same data type
+list it will contain elements of different data types.
+
+
+23.what is pickling and unpickling?
+pickling is the process whereby a python object into byte stream to store it in a file.
+unpickling  is reverse process byte stream is converted back into a python object
+
+import pickle
+# Define a Python object (e.g., a dictionary)
+data = {'name': 'Alice', 'age': 30, 'city': 'New York'}
+ 
+# Pickling: serialize the object to a byte stream and save it to a file
+with open('data.pkl', 'wb') as file:
+    pickle.dump(data, file)
+ 
+print("Data has been pickled and saved to 'data.pkl'.")
+ 
+# Unpickling: deserialize the byte stream back to a Python object
+with open('data.pkl', 'rb') as file:
+    loaded_data = pickle.load(file)
+ 
+print("Loaded data after unpickling:", loaded_data)
+
+

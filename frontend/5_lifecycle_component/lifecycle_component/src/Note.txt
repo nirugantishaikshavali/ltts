@@ -1,0 +1,32 @@
+Component Life Cycle methods is used in Class Component only
+
+->Components Have 3 Phases
+1.Mounting Phase
+2.Update Phase
+3.UnMounting Phase
+
+
+1.Mounting Phase :-When a Component Render first Time then it is Mounting Phase.
+Here we have 4 Methods are there:-
+->Constructor:-Initialze objects inside constructor and  must and should declare super key 
+->getDerivedStateFromProps():-Passing Data from parent Componet to child Component.
+->render():Component Data placed in DOM
+->componentDidMount():-By using componentDidMount we can do API's calls ,synchronize calls and DOM Related Calls.
+
+
+2.Update Phase:-When a Component re-render then updating lifecycle methods 
+Here we have 5 Methods are there:-
+1.getDerivedStateFromProps()
+2.shouldComponentUpdate():-In shouldComponentUpdate we can return either true or false 
+when it  return false then component won't re-render 
+3.render()
+4.getSnapshotBeforeUpdate():-
+->If getSnapshotBeforeUpdate used then must should ComponentDidUpdate also used .
+->Based upon prevProps,prevState we can do DOM changes.
+5.ComponentDidUpdate
+
+
+3.UnMounting Phase:-When a Component removed from DOM 
+Here we have 1 Method are there:-
+1.componentWillUnmount()
+->To remove event listeners,to clear the setTimeout

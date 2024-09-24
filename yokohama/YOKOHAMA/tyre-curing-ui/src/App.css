@@ -1,0 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+}
+ 
+.App {
+  display: flex;
+  height: 100vh;
+}
+
+
+ 
+.sidebar {
+  width: 200px;
+  /* background-color: #007bff; */
+  background-color: #040425ee;
+  padding-top: 20px;
+  color: white;
+  /* color: rgb(228, 176, 6); */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+ 
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+ 
+nav ul li {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+ 
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+ 
+nav ul li.active, nav ul li:hover {
+  background-color: #0056b3;
+  /* background-color: #101011ee; */
+
+}
+ 
+.settings-help {
+  padding: 20px;
+}
+ 
+.settings-help a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+}
+ 
+.settings-help a:hover {
+  color: #ddd;
+}
+ 
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+ 
+.content h1 {
+  margin-top: 0;
+}
+
+
+.signout-button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* .signout-button:hover {
+  color: #007bff; /* Change this to your desired hover color */

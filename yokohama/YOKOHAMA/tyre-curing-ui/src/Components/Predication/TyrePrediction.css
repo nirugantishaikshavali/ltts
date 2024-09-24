@@ -1,0 +1,13 @@
+.table-container {
+    max-height: 550px; /* Adjust the height as needed */
+    overflow-y: auto;
+  }
+
+  .header {
+    margin-top: 20px;
+    color: #042e4779; /* Change to your desired color */
+    font-size: 32px; /* Change to your desired font size */
+    font-family: "Times New Roman", Times, serif;
+
+  }
+  

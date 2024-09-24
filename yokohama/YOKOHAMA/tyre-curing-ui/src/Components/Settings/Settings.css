@@ -1,0 +1,50 @@
+
+.header-t {
+    margin-top: 20px;
+    color: #010c1379; /* Change to your desired color */
+    font-size: 32px; /* Change to your desired font size */
+    font-family: "Times New Roman", Times, serif;
+
+  }
+  
+
+  .Mainheader{
+    text-align: center;
+    color:#1f15e079;
+    font-family: "Times New Roman", Times, serif;
+
+  }
+
+
+  body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
+  }
+  
+  .Mainheader {
+    margin-bottom: 20px;
+  }
+  
+  .header-t {
+    margin-top: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .table {
+    margin-top: 20px;
+  }
+  
+  .row {
+    margin-bottom: 20px;
+  }
+  

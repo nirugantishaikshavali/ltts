@@ -1,0 +1,145 @@
+/* .tabs {
+    display: flex;
+    justify-content: space-between;
+  }
+   
+  button {
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+   
+  button:focus {
+    outline: none;
+  }
+   
+  .content {
+    margin-top: 20px;
+  }
+   
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+   
+  th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+  } */
+/* 
+  .Tyre_Curing_Data {
+    width: 100%;
+
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .content {
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+   */
+
+
+   .Tyre_Curing_Data {
+    width: 100%;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 100%; /* Ensure both buttons have the same width */
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  .left-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .left-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .right-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .right-button:hover {
+    background-color: #218838;
+  }
+  
+  .content {
+    margin-top: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
